@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CloudOps Duo — Học Cloud Engineer kiểu Duolingo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="mascot">☁️</div>
+        <div>
+          <h1>CloudOps Duo</h1>
+          <p>6 phase · 24 lesson · 144 câu hỏi · 24 lab</p>
+        </div>
+      </div>
+      <nav id="phaseNav" class="phase-nav"></nav>
+      <div class="source-card">
+        <h3>Nguồn YouTube uy tín</h3>
+        <p>The Linux Foundation, GitHub, Docker, AWS Events, HashiCorp, CNCF, PromLabs, freeCodeCamp.</p>
+        <button id="openReviewBtn" class="ghost-btn">Ôn tập (<span id="reviewDueCount">0</span>)</button>
+        <button id="openExamBtn" class="ghost-btn">Thi thử SAA-C03</button>
+        <button id="openSourcesBtn" class="ghost-btn">Xem nguồn</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Roadmap Cloud Engineer 6 tháng</p>
+          <h2 id="screenTitle">Lộ trình học tương tác</h2>
+        </div>
+        <div class="stats">
+          <div><span id="totalXp">0</span><small>XP</small></div>
+          <div><span id="streak">0</span><small>Streak</small></div>
+          <div><span id="completedLessons">0</span><small>Done</small></div>
+        </div>
+      </header>
+
+      <section id="dashboard" class="dashboard"></section>
+      <section id="lessonScreen" class="lesson-screen hidden"></section>
+      <section id="labScreen" class="lesson-screen hidden"></section>
+      <section id="reviewScreen" class="lesson-screen hidden"></section>
+      <section id="examScreen" class="lesson-screen hidden"></section>
+      <section id="sourcesScreen" class="sources-screen hidden"></section>
+    </main>
+  </div>
+
+  <template id="phaseCardTemplate">
+    <article class="phase-card">
+      <div class="phase-card-head">
+        <span class="phase-badge"></span>
+        <span class="progress-pill"></span>
+      </div>
+      <h3></h3>
+      <p></p>
+      <div class="lesson-list"></div>
+    </article>
+  </template>
+
+  <script src="data.js"></script>
+  <script src="data-v2.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

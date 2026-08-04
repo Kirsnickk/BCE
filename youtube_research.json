@@ -1,0 +1,111 @@
+[
+  {
+    "phase": "Phase 1",
+    "channel": "The Linux Foundation",
+    "title": "Beginners Intro to Command-line",
+    "id": "N850L5Kv4Pg",
+    "url": "https://www.youtube.com/watch?v=N850L5Kv4Pg",
+    "available_languages": [
+      "en (\"English (auto-generated)\")[TRANSLATABLE]"
+    ],
+    "transcript_ok": true,
+    "snippet_count": 1769,
+    "transcript_chars": 62382,
+    "excerpt": "All right. Uh good morning everybody. So welcome to the second session of AI for all webinar series. And today with me I have Kevin Galloway uh system admin at research computing system and uh so today's topic is Linux foundation and it's a beginner's intro to command line. uh in the next one and a half hour Kevin will talk about that and uh just for your information we are recording this session also and that is available at UF data AI lab website and uh so and uh where you can find everything in here so the web address is cs.uaf.edu/data edu/data lab and uh if you go to this AI for all template you can see uh all the materials and everything is posted there. So if you want to know about our speaker you can do like this. Uh so today's speaker is Kevin. So Kevin he has been with research computing system for almost 9 years and currently as a Linux and HPC analyst. He received his bachelor's and master's degrees in computer science from UAF. His work focuses on system administering HPC clusters and helping researchers and access and utilize high performance computing and all the material that Kevin will share will be available in the same website in this uh place. So uh Kevin withou"
+  },
+  {
+    "phase": "Phase 1",
+    "channel": "GitHub",
+    "title": "How to create a pull request in 4 min",
+    "id": "nCKdihvneS0",
+    "url": "https://www.youtube.com/watch?v=nCKdihvneS0",
+    "available_languages": [
+      "en-US (\"English (United States)\")[TRANSLATABLE]",
+      "en (\"English (auto-generated)\")[TRANSLATABLE]"
+    ],
+    "transcript_ok": true,
+    "snippet_count": 87,
+    "transcript_chars": 3179,
+    "excerpt": "today I'll show you how to create your first pool request on GitHub step by step I'm kadaa and I'm so happy you're here with me today in this video I'm going to show you how to create your first pool request on GitHub a pool request or a PR is a proposal to merge a set of changes from one branch into another you can collaborate with others to review and discuss the proposed set of changes before they're integrated into the main code basee PRS visually display the differences or diffs between the content in the source Branch the branch with your changes and the content in the Target Branch the branch you want to merge into you can create a pool request on github.com with GitHub desktop in GitHub Cod spaces on GitHub mobile and when using the GitHub CLI you can also create a pool request right from your terminal with Git and that's what we'll be doing today on GitHub navigate to your reposit clone it and create a new Branch get checkout DB update name open up the repository in your editor and make a change stage and commit your changes with Git ad and git commit DM update game name now run good status to ensure that your changes were successfully committed awesome we can now do G pus"
+  },
+  {
+    "phase": "Phase 1",
+    "channel": "Docker",
+    "title": "Docker 101: Introduction to Docker and Containers",
+    "id": "kwsJIH5TGIg",
+    "url": "https://www.youtube.com/watch?v=kwsJIH5TGIg",
+    "available_languages": [
+      "en (\"English (auto-generated)\")[TRANSLATABLE]"
+    ],
+    "transcript_ok": true,
+    "snippet_count": 1274,
+    "transcript_chars": 47615,
+    "excerpt": "good day everyone and thank you for joining today's webinar doctor 101 introduction to docker and containers as a reminder this session is being recorded and a copy of the recording will be sent out a couple days after the webinar we will take questions at the end of the session so please type your questions in the Q&A window located in the lower right of your screen and our speaker will address them for you at the end of the session I would now like to introduce our speaker Jenny Fong director of product marketing at docker Jenny I know two things over to you and welcome everybody thank you for joining us on this first webinar of 2018 Happy New Year give me a second I'm going to share my screen you so as we mentioned my name is Jenny song and the director product marketing here at docker you can also follow me on twitter at text gal honey i on what we want to do today is get everybody's New Year started right with some learning about containers and docker so we'll go over the basics of what a container is introduced docker the company and how companies are running production and at the end we'll give you some guidance on how you can get started with your wedding so let's start wit"
+  },
+  {
+    "phase": "Phase 2",
+    "channel": "AWS Events",
+    "title": "Getting started with AWS identity",
+    "id": "Zvz-qYYhvMk",
+    "url": "https://www.youtube.com/watch?v=Zvz-qYYhvMk",
+    "available_languages": [
+      "en (\"English (auto-generated)\")[TRANSLATABLE]"
+    ],
+    "transcript_ok": true,
+    "snippet_count": 1869,
+    "transcript_chars": 63166,
+    "excerpt": "Well, 9:15 a.m. on re:Invent Friday, these must be the true believers here. All right. Well, it says something here about getting started with AWS identity, so let's do that. And as a matter of fact, you know, at least from a security perspective, actually from any sort of a builder perspective, getting started with AWS kind of means getting started with AWS identity. I'll explain. Okay. So, if you think about security before the era of the cloud. Now, I'm going to grossly exaggerate the state of the world there just kind of make a point, right? If you think about, you know, what what you had, you had like a data center, some servers in it, databases in it, right? How do we secure this thing? How do How do we keep, you know, unwanted access? Oh, well, you know, network firewall maybe around the whole thing. Once you're in, you're good, but once you're out, you know, you're behind this you know, you're you're outside this firewall, right? Um, you know, put, you know, like somebody's in charge of the security, not happy about it, right? And, you know, maybe this the security is mostly at the perimeter. And And, you know, there is maybe some a little bit of finer grain control in ther"
+  },
+  {
+    "phase": "Phase 3",
+    "channel": "HashiCorp, an IBM Company",
+    "title": "Introduction to Terraform",
+    "id": "ZFLWA1kQ3ls",
+    "url": "https://www.youtube.com/watch?v=ZFLWA1kQ3ls",
+    "available_languages": [
+      "en (\"English (auto-generated)\")[TRANSLATABLE]"
+    ],
+    "transcript_ok": true,
+    "snippet_count": 660,
+    "transcript_chars": 24631,
+    "excerpt": "[Music] Welcome. Today I wanted to spend a little bit of time on an introduction to Terraform. A tool many of you maybe have heard about or maybe have played with. But I want to give a little bit of a more in-depth sense of what is the tool for, how does it apply practices like infrastructure as code, and how do we really go from almost the very basics of what infrastructure can do all the way through to really thinking about the full infrastructure life cycle management that Terraform was designed for. So at the core, the concept that's most critical to really understanding Terraform is this notion of infrastructure as code. So what does that mean at its heart? What it means is that what we're want to do is move away from this model where maybe we manually manage infrastructure. We log into a console, we point andclick, we log in, we run commands manually to one where we really codify it, right? We treat it like a configuration file or like code where we're actually version controlling it. We're saving it to, you know, a system like Git and we're managing it almost the same way we would manage an applications life cycle. Right? So at the heart where this starts with something like"
+  },
+  {
+    "phase": "Phase 4",
+    "channel": "CNCF",
+    "title": "Kubernetes and Cloud Native Essentials Training",
+    "id": "U05NwXkSWyU",
+    "url": "https://www.youtube.com/watch?v=U05NwXkSWyU",
+    "available_languages": [
+      "en (\"English (auto-generated)\")[TRANSLATABLE]"
+    ],
+    "transcript_ok": true,
+    "snippet_count": 43,
+    "transcript_chars": 1519,
+    "excerpt": "everyone knows there are great career opportunities in it but far fewer know where to start without already having experience in the industry cloud technologies are in especially high demand with hiring managers looking for cloud skills more than any other area those who do not already have work experience though or a portfolio of projects they have created themselves can struggle to get a foot in the door while companies continue to face talent shortages and look for ways to upskill current staff that is why the cloud native computing foundation and the linux foundation have created the kubernetes and cloud native associate certification kcna for short which demonstrates a candidate has conceptual knowledge of the cloud native ecosystem particularly focusing on kubernetes to gain the skills necessary to both pass this certification exam and to be successful in an entry-level cloud role we have developed the kubernetes and cloud native essentials training course the course provides an overview of cloud-native technologies and then dives into container orchestration participants will review the high-level architecture of kubernetes understand the challenges of container orchestratio"
+  },
+  {
+    "phase": "Phase 5",
+    "channel": "PromLabs",
+    "title": "Introduction to the Prometheus Monitoring System",
+    "id": "STVMGrYIlfg",
+    "url": "https://www.youtube.com/watch?v=STVMGrYIlfg",
+    "available_languages": [
+      "en-US (\"English (United States)\")[TRANSLATABLE]",
+      "en (\"English (auto-generated)\")[TRANSLATABLE]"
+    ],
+    "transcript_ok": true,
+    "snippet_count": 292,
+    "transcript_chars": 10820,
+    "excerpt": "hi I'm Julius in this video we're going to take a super quick look at the Prometheus monitoring system we're going to talk about what Prometheus is what the system architecture looks like and what some of the main features are that make Prometheus so useful [Music] so what is Prometheus it's a metrics-based monitoring system that helps you ensure that your systems and services are healthy and behaving well it gives you a whole tool chain of libraries and server components that allow you to expose metrics from the things you care about collect and record those metrics and then do useful things with them such as alerting dashboarding ad hoc debugging or automation aside from that Prometheus is written in the go programming language and it's hosted by the cloud native Computing Foundation under an open governance all right with that out of the way let's have a look at the system architecture of a basic Prometheus monitoring setup The Big Box in the middle here is the Primitive server depending on your needs and the size of your organization you can run one or many of these now Prometheus is a pull-based monitoring system that pulls or scrapes metrics over HTTP from a set of systems an"
+  },
+  {
+    "phase": "Phase 6",
+    "channel": "freeCodeCamp.org",
+    "title": "AWS Solutions Architect Associate Certification Course",
+    "id": "c3Cn4xYfxJY",
+    "url": "https://www.youtube.com/watch?v=c3Cn4xYfxJY",
+    "transcript_ok": false,
+    "error": "TranscriptsDisabled: \nCould not retrieve a transcript for the video https://www.youtube.com/watch?v=c3Cn4xYfxJY! This is most likely caused by:\n\nSubtitles are disabled for this video\n\nIf you are sure that the described cause is not responsible for this error and that a transcript should be retrievable, please create an issue at https://github.com/jdepoix/youtube-transcript-api/issues. Please add which version of youtu"
+  }
+]
