@@ -13,13 +13,14 @@
         <div class="mascot">☁️</div>
         <div>
           <h1>CloudOps Duo</h1>
-          <p>6 phase · 24 lesson · 144 câu hỏi · 24 lab</p>
+          <p>26 tuần · 182 ngày · 6 phase · 24 lesson</p>
         </div>
       </div>
       <nav id="phaseNav" class="phase-nav"></nav>
       <div class="source-card">
         <h3>Nguồn YouTube uy tín</h3>
         <p>The Linux Foundation, GitHub, Docker, AWS Events, HashiCorp, CNCF, PromLabs, freeCodeCamp.</p>
+        <button id="openDailyBtn" class="ghost-btn">Học theo ngày</button>
         <button id="openReviewBtn" class="ghost-btn">Ôn tập (<span id="reviewDueCount">0</span>)</button>
         <button id="openExamBtn" class="ghost-btn">Thi thử SAA-C03</button>
         <button id="openSourcesBtn" class="ghost-btn">Xem nguồn</button>
@@ -35,11 +36,12 @@
         <div class="stats">
           <div><span id="totalXp">0</span><small>XP</small></div>
           <div><span id="streak">0</span><small>Streak</small></div>
-          <div><span id="completedLessons">0</span><small>Done</small></div>
+          <div><span id="completedLessons">0</span><small>Ngày</small></div>
         </div>
       </header>
 
-      <section id="dashboard" class="dashboard"></section>
+      <section id="dayScreen" class="day-screen"></section>
+      <section id="dashboard" class="dashboard hidden"></section>
       <section id="lessonScreen" class="lesson-screen hidden"></section>
       <section id="labScreen" class="lesson-screen hidden"></section>
       <section id="reviewScreen" class="lesson-screen hidden"></section>
@@ -62,6 +64,7 @@
 
   <script src="data.js"></script>
   <script src="data-v2.js"></script>
+  <script src="data-v3.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

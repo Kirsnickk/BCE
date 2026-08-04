@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>CloudOps Duo — Daily flow test</title>
+<script>
+window.CLOUD_APP_DATA = {};
+</script>
+</head>
+<body>
+<script src="data.js"></script>
+<script src="data-v2.js"></script>
+<script src="data-v3.js"></script>
+<script>
+(() => {
+  const d = window.CLOUD_APP_DATA;
+  const errors = [];
+  const lessons = d.phases.flatMap(p => p.lessons.map(l => ({phase:p, lesson:l})));
+  const lessonMap = new Map(lessons.map(x => [x.lesson.id, x]));
+  const questionMap = new Map(lessons.flatMap(x => x.lesson.questions.map(q => [q.id, q])));
+  const days = d.dailyPlan || [];
+  const assert = (ok, msg) => { if (!ok) errors.push(msg); };
+  assert(days.length === 182, `expected 182 days, got ${days.length}`);
+  assert(new Set(days.map(x => x.week)).size === 26, 'expected all 26 weeks');
+  days.forEach(day => {
+    const total = Object.values(day.budgetMinutes || {}).reduce((a,b) => a + Number(b || 0), 0);
+    assert(total >= 165 && total <= 195, `${day.id}: budget ${total}`);
+    assert((day.theory?.sources || []).length >= 2, `${day.id}: fewer than 2 sources`);
+    assert((day.theory?.sources || []).some(s => s.verified === true), `${day.id}: no verified source`);
+    assert(Boolean(day.lab?.realWorldContext), `${day.id}: missing realWorldContext`);
+    const lesson = lessonMap.get(day.lab?.lessonRef);
+    assert(Boolean(lesson), `${day.id}: unknown lessonRef`);
+    (day.reviewQuestionIds || []).forEach(id => {
+      assert(Boolean(questionMap.get(id)), `${day.id}: unknown question ${id}`);
+      assert(Boolean(lesson?.lesson.questions.some(q => q.id === id)), `${day.id}: question ${id} not from lessonRef`);
+    });
+  });
+  const legacy = { xp:123, streak:4, completed:{'p1:p1l1':true}, reviewQueue:{p1l1q1:{box:1,dueAfterOpens:2}}, examHistory:[{score:50}], currentDay:99 };
+  localStorage.setItem('cloudops-duo-progress-v2', JSON.stringify(legacy));
+  const state = JSON.parse(localStorage.getItem('cloudops-duo-progress-v2'));
+  assert(state.xp === 123 && state.streak === 4 && state.completed['p1:p1l1'] === true, 'legacy state fixture failed');
+  document.body.textContent = errors.length ? `FAIL\n${errors.join('\n')}` : `PASS\n${days.length} days, 26 weeks, migration fixture preserved XP/streak/completed.`;
+  document.body.dataset.status = errors.length ? 'fail' : 'pass';
+})();
+</script>
+</body>
+</html>

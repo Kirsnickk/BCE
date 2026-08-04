@@ -377,3 +377,65 @@ python -m http.server 8765 --bind 127.0.0.1
 
 Sau đó mở: `http://127.0.0.1:8765/`
 
+---
+
+## GIAI ĐOẠN 7 — Nâng cấp CloudOps Duo v3 theo ngày (04/08/2026)
+
+### 7.1. Mục tiêu v3
+
+Nâng app từ mô hình lesson/quiz v2 sang entry point học theo ngày cho roadmap 26 tuần / 182 ngày. Flow chính: Lý thuyết → Lab thực hành → Review cuối ngày → mở ngày kế tiếp.
+
+### 7.2. File đã cập nhật
+
+```text
+C:\Users\vandu\Documents\Become Cloud Engineering\cloud-duolingo-app\index.html
+C:\Users\vandu\Documents\Become Cloud Engineering\cloud-duolingo-app\app.js
+C:\Users\vandu\Documents\Become Cloud Engineering\cloud-duolingo-app\styles.css
+C:\Users\vandu\Documents\Become Cloud Engineering\cloud-duolingo-app\data-v3.js
+C:\Users\vandu\Documents\Become Cloud Engineering\cloud-duolingo-app\README.md
+C:\Users\vandu\Documents\Become Cloud Engineering\cloud-duolingo-app\day-test.html
+```
+
+### 7.3. Nội dung v3
+
+- `data-v3.js` thêm `dayPlanMeta` và `dailyPlan` gồm 182 ngày, map từ `Task/KE_HOACH_HOC_3_GIO_MOI_NGAY.md`.
+- Mỗi ngày có title đầy đủ, theory summary, key points, nguồn xác thực, lab context, guided/debug/evidence task và 5–8 review questions.
+- Đã làm sạch title bị cắt bằng dấu `…`; kiểm tra Node cho kết quả `ellipsis = 0`.
+- `index.html` load thêm `data-v3.js`, thêm `dayScreen`, nút “Học theo ngày”, và sidebar copy v3.
+- `app.js` thêm daily flow: `renderDay`, `renderDayTheory`, `renderDayLab`, `startDailyReview`, `completeDailyReview`.
+- State chính v3 dùng key `cloudops_duo_state_v3`, có `migrationVersion: 3`; vẫn migrate từ `cloudops-duo-progress-v1` và `cloudops-duo-progress-v2`.
+- `styles.css` thêm nhóm style `.day-screen`, `.day-hero`, `.day-total`, `.timebar`, `.day-steps`, `.theory-panel`, source chips.
+- README app đổi sang CloudOps Duo v3 và mô tả đúng state/file/flow mới.
+
+### 7.4. Nghiệm thu thực tế
+
+Kiểm tra đã chạy:
+
+| Hạng mục | Kết quả |
+|---|---|
+| `node --check app.js` | Pass |
+| `node --check data.js` | Pass |
+| `node --check data-v2.js` | Pass |
+| `node --check data-v3.js` | Pass |
+| HTTP `http://127.0.0.1:8765/` | 200 OK |
+| HTTP `data-v3.js` | 200 OK |
+| Browser mở app | Hiển thị Ngày 1/182, sidebar `26 tuần · 182 ngày · 6 phase · 24 lesson` |
+| Flow Theory → Lab → Review | Pass |
+| Review ngày 1 | Pass 6 câu: `p1l1q1` đến `p1l1q6` |
+| Hoàn tất ngày | Pass: title `Hoàn tất ngày 1` |
+| Persistence sau reload | Pass: mở lại ở `Ngày 2/182`, `1/182` ngày đã hoàn thành |
+| localStorage v3 | Pass: `cloudops_duo_state_v3`, `migrationVersion: 3`, `currentDay: 2`, `daysCompleted.d001: true` |
+
+### 7.5. Cách chạy hiện tại
+
+```bash
+cd "/c/Users/vandu/Documents/Become Cloud Engineering/cloud-duolingo-app"
+python -m http.server 8765 --bind 127.0.0.1
+```
+
+Mở:
+
+```text
+http://127.0.0.1:8765/
+```
+

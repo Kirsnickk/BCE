@@ -8,6 +8,8 @@ Repo lưu toàn bộ artifact cho dự án học 6 tháng chuyển từ IT Opera
 - **Nghiên cứu thị trường**: `cloud_engineer_market_research_addendum.md`
 - **Nghiên cứu nguồn YouTube**: `youtube_research.md` / `.json`
 - **App học tập CloudOps Duo v2**: `cloud-duolingo-app/`
+- **Kế hoạch thực hành 3 giờ/ngày — 26 tuần / 182 ngày**: `Task/KE_HOACH_HOC_3_GIO_MOI_NGAY.md`
+- **Template nhật ký cho mỗi buổi học**: `Task/TEMPLATE_NHAT_KY_3_GIO.md`
 - **Nhật ký công việc**: `NHAT_KY_CONG_VIEC.md`
 
 ## CloudOps Duo v2
